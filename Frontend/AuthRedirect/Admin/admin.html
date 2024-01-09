@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="admin.css" />
+    <title>Hotel Information Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Hotel Information</h2>
+      <form id="hotelForm">
+        <div class="form-group">
+          <label for="images">Images:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="images"
+            name="images"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="heading">Heading:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="heading"
+            name="heading"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="hotel_stars">Hotel Stars:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="hotel_stars"
+            name="hotel_stars"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="google_review">Google Review:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="google_review"
+            name="google_review"
+            step="0.1"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="text">Text:</label>
+          <textarea
+            class="form-control"
+            id="text"
+            name="text"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <textarea
+            class="form-control"
+            id="description"
+            name="description"
+            rows="5"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="package_includes">Package Includes:</label>
+          <textarea
+            class="form-control"
+            id="package_includes"
+            name="package_includes"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="strickedout_price">Strickedout Price:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="strickedout_price"
+            name="strickedout_price"
+            step="0.01"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="offer_percentage">Offer Percentage:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="offer_percentage"
+            name="offer_percentage"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="offer_price">Offer Price:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="offer_price"
+            name="offer_price"
+            step="0.01"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

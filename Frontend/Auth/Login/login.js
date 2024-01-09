@@ -8,7 +8,7 @@ document
     console.log(email, password);
 
     if (email === "admin@gmail.com" && password === "admin@123") {
-      window.location.href = "../../AuthRedirect/admin.html";
+      window.location.href = "../../AuthRedirect/Admin/admin.html";
     } else if (email === "hotel@gmail.com" && password === "hotel@123") {
       window.location.href = "../../AuthRedirect/hotel.html";
     } else if (email === "staff@gmail.com" && password === "staff@123") {

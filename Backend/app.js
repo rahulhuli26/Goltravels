@@ -9,6 +9,7 @@ const mysql = require("mysql2");
 require("dotenv").config();
 const cors = require("cors");
 
+const adminAuthRouter = require("./routes/auth.admin");
 const authRouter = require("./routes/auth.route");
 const facebookRouter = require("./routes/auth.facebook");
 const googleRouter = require("./routes/auth.google");
@@ -31,6 +32,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());
 app.use("/auth", authRouter);
+app.use("/admin", adminAuthRouter);
 app.use("/", facebookRouter);
 app.use("/", googleRouter);
 

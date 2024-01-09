@@ -51,4 +51,45 @@ authRouter.post("/login", (req, res) => {
   });
 });
 
+authRouter.post("/upload", (req, res) => {
+  const {
+    images,
+    heading,
+    hotel_stars,
+    google_review,
+    text,
+    description,
+    package_includes,
+    strickedout_price,
+    offer_percentage,
+    offer_price,
+  } = req.body;
+
+  // Insert data into the MySQL database
+  const sql =
+    "INSERT INTO hotel_info (images, heading, hotel_stars, google_review, text, description, package_includes,strickedout_price, offer_percentage, offer_price) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+  const values = [
+    images,
+    heading,
+    hotel_stars,
+    google_review,
+    text,
+    description,
+    package_includes,
+    strickedout_price,
+    offer_percentage,
+    offer_price,
+  ];
+
+  db.query(sql, values, (err, result) => {
+    if (err) {
+      console.error("Error inserting data into database:", err);
+      res.status(500).json({ error: "Internal Server Error" });
+    } else {
+      console.log("Data inserted into database");
+      res.status(200).json({ message: "Data inserted into database" });
+    }
+  });
+});
+
 module.exports = authRouter;
